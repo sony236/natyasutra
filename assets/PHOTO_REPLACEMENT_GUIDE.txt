@@ -1,0 +1,25 @@
+SONIA NATYASUTRA — IMAGE-FIRST WEBSITE
+
+This website intentionally has NO photo-card components. Photographs are normal <img> elements so you can replace them easily.
+
+HOW TO REPLACE ANY IMAGE
+1. Put your photo inside the assets folder.
+2. Open the relevant HTML file.
+3. Find the <img ...> for that section.
+4. Change only the src value.
+   Example: src="assets/my-photo.jpg"
+5. Save and refresh the page.
+
+HOME VIDEO
+- assets/dance-hero.mp4 is the full-screen blended hero video.
+- Replace it with your own 16:9 MP4 using the same filename.
+- The video automatically blends into the dark vibrant maroon/gold theme.
+
+IMAGE LOCATIONS
+- index.html → home images
+- about.html → story, stages/programs, academy building
+- dance-forms.html → dance-form images
+- programs.html → program/learning images
+- gurus.html → four mentor images
+- gallery-reviews.html → gallery images
+- contact.html → enquiry image

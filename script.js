@@ -1,0 +1,6 @@
+const nav=document.querySelector('.site-nav');window.addEventListener('scroll',()=>nav?.classList.toggle('scrolled',scrollY>40));
+const menu=document.querySelector('.menu-btn'),links=document.querySelector('.nav-links');menu?.addEventListener('click',()=>{links.classList.toggle('open');menu.textContent=links.classList.contains('open')?'×':'☰'});document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const current=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.nav-links a').forEach(a=>{if(a.getAttribute('href')===current)a.classList.add('active')});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));
+document.querySelectorAll('[data-year]').forEach(x=>x.textContent=new Date().getFullYear());
+document.querySelectorAll('form').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const msg=form.querySelector('.form-msg');if(msg){msg.textContent='Thank you. Your enquiry has been received.';msg.style.color='#c8a45b'}form.reset()}));
